@@ -3,13 +3,14 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/SignUp/SignUp';
 import Profile from './pages/Profile/Profile';
 import FindTeachers from './pages/FindTeachers/FindTeachers';
-import {Routes,Route } from "react-router-dom";
+import {Routes,Route} from "react-router-dom";
 import Layout from './components/Layout/Layout';
 import NotFound404 from './pages/NotFound404/NotFound404';
 import Test from './pages/Test/Test';
 import SecretPage from './pages/SecretPage/SecretPage';
 import { RequireAuth } from './components/RequireAuth/RequireAuth.js';
 import Logout from './pages/Logout/Logout';
+import TeacherId from './pages/FindTeachers/TeacherId/TeacherId';
 
 
 export default  function App() {
@@ -24,7 +25,9 @@ export default  function App() {
         
         <Route path='/signup' element={<SignUp/>}/>
           <Route path='/profile' element={<Profile/>}/>
-          <Route path='/findteachers' element={<FindTeachers/>}/>
+          <Route path='/findteachers' element={<FindTeachers/>}>
+              <Route path=":teacherid" element={<TeacherId/>}/>
+          </Route>
           <Route path='/test' element={<Test/>}/>
 
            {/* protected route */} 
@@ -37,5 +40,12 @@ export default  function App() {
         </Route>
     </Routes>
 
+
     );
-}
+
+
+
+  }
+
+
+

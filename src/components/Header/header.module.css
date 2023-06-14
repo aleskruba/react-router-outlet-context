@@ -1,71 +1,173 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins:ital,wght@0,200;0,400;1,200&display=swap');
+
+* {
+  margin: 0;
 }
+
 .header {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftUl {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.leftUl li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.leftUl li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.logoImg {
+  width: 30px;
+  height: 30px;
+}
+
+.rightUl {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: 50px;
+}
+
+.rightUl li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.rightUl li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.profileImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.profileImgDiv {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImgDiv:hover .profileImgUl {
+  display: block;
+}
+
+.profileImgUl {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 55px; /* adjust this value to position the dropdown menu properly */
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profileImgUl li {
+  margin-bottom: 5px;
+}
+
+
+.profileImgUl li.profileLogout a {
+  color: red;
+}
+
+.profileImgUl li a {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.profileImgUl li a:hover {
+  background-color: #000;
+  color:#f2f2f2; /* adjust this value to change the hover color */
+}
+
+
+.profileImgUl li.profileLogout a:hover {
+  background-color: red;
+  color:#f2f2f2; /* adjust this value to change the hover color */
+}
+
+
+@media (max-width: 767px) {
+
+  .logoImg{
+    display: none;
+  }
+
+  .leftUl {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .profileImgDiv:hover .profileImgUl {
+    display: block;
+  }
+
+  .profileImgUl {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px; /* adjust this value to position the dropdown menu properly */
     background-color: #f2f2f2;
     padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  .profileImgUl li {
+    margin-bottom: 5px;
   }
-  
-  .leftUl {
-    display: flex;
-    align-items: center;
-    list-style: none;
+
+  .profileImgUl li.profileLogout a {
+    color: red;
   }
-  
-  .leftUl li {
-    margin-right: 10px;
-    cursor: pointer;
+
+  .profileImgUl li a {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: #000;
   }
-  
-  .logoImg {
-    width: 30px;
-    height: 30px;
+
+  .profileImgUl li a:hover {
+    background-color: #000;
+    color: #f2f2f2; /* adjust this value to change the hover color */
   }
-  
-  .rightUl {
-    display: flex;
-    align-items: center;
-    list-style: none;
+
+  .profileImgUl li.profileLogout a:hover {
+    background-color: red;
+    color: #f2f2f2; /* adjust this value to change the hover color */
   }
-  
-  .rightUl li {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .profileImgDiv {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-  }
-  
-  .profileImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  @media (max-width: 767px) {
-    .navbar {
-      flex-direction: column;
-    }
-  
-    .leftUl,
-    .rightUl {
-      margin-top: 10px;
-    }
-  
-    .leftUl li,
-    .rightUl li {
-      margin-right: 0;
-      margin-bottom: 5px;
-    }
-  }
-  
+}
