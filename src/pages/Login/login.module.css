@@ -51,12 +51,23 @@ dialog[open] {
     width: 250px;
   }
   
-  .formError {
-    text-align: center;
-    font-size: 12px;
-    color: red;
+  .emailInputContainer {
+     display: flex;
+     flex-direction: column;
   }
 
+
+  .emailErrorContainer{
+    color:red;
+    font-size: 14px;
+    font-weight: 100;
+  }
+
+  .passwordInputContainer {
+    display: flex;
+    flex-direction: column;
+
+ }
   .buttons{
     display: flex;
     gap:20px
