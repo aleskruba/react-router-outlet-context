@@ -19,6 +19,9 @@ function Header() {
           <li>
             <Link to="/secretpage">Secret Page</Link>
           </li>
+          <li>
+            <Link to="/myteachers">My Teachers</Link>
+          </li>
         </ul>
 
         {/* right side */}

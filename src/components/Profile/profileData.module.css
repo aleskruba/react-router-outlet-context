@@ -1,0 +1,36 @@
+.profileDataContainer {
+    display: grid;
+    grid-template-columns: 1fr fr;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  .profileDataMenu {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  
+  .profileDataCurrent {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  
+  .updateButtonLI{
+    margin-top: 20px;
+  }
+
+  .updateButton{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    cursor: pointer;
+  }
+
+  .updateButton:hover {
+    background-color: #408c40; /* Darker shade of the original color */
+  }

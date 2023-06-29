@@ -1,0 +1,9 @@
+.footer {
+    text-align: center;
+    height: 100%;
+  }
+
+  .footerTitle{
+    margin-top: 20px;
+    color:red
+  }
